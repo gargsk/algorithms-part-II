@@ -3,11 +3,11 @@ package algorithms.part2;
 import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdOut;
 
-public class DFS {
+public class DepthFirstPaths {
     private boolean[] marked;
     private Integer count;
 
-    public DFS(Graph G, Integer v) {
+    public DepthFirstPaths(Graph G, Integer v) {
         this.marked = new boolean[G.getVertices()];
         this.count = 0;
         validateVertex(v);
@@ -18,7 +18,7 @@ public class DFS {
         In in = new In(args[0]);
         Graph G = new Graph(in);
         int s = Integer.parseInt(args[1]);
-        DFS search = new DFS(G, s);
+        DepthFirstPaths search = new DepthFirstPaths(G, s);
         for (int v = 0; v < G.getVertices(); v++) {
             if (search.marked(v))
                 StdOut.print(v + " ");
